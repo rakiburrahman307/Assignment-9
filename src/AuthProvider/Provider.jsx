@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
 import { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged} from 'firebase/auth';
 import { app } from '../Firebase/firebase';
 
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 const auth =getAuth(app)
-const Provider = (children) => {
+const Provider = ({children}) => {
 
  const [user, setUser] = useState(null);
  const [loading,setLoading] = useState(true);
 
- const createUser =(email,password,name)=>{
+ const createUser =(email,password)=>{
     setLoading(true);
-    return createUserWithEmailAndPassword(auth,email,password,name)
+    return createUserWithEmailAndPassword(auth,email,password)
  }
+
 
  useEffect(()=>{
     const unSubscribe = onAuthStateChanged(auth, currentUser =>{
@@ -28,13 +29,14 @@ const Provider = (children) => {
             }
           }
          
-    })
- },[])
+    });
+ },[]);
 
    const authInfo ={
     createUser,
     loading,
-    user
+    user,
+
 
 
 }

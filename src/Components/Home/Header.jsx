@@ -2,17 +2,27 @@
 // import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useContext } from 'react';
+import { AuthContext } from '../../AuthProvider/Provider';
 
 const Header = () => {
+    const {user} = useContext(AuthContext);
     const navLink = <>
         <li><NavLink to='/' className="font-semibold">Home</NavLink></li>
         <li><NavLink to='/about' className="font-semibold mx-3">About</NavLink></li>
-        <li><NavLink to='/contact' className="font-semibold">Contact</NavLink></li>
-        {/* <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li> */}
+        <li><NavLink to='/contact' className="font-semibold mr-3">Contact</NavLink></li>
+        {
+            user ?
+            <li><NavLink to='/profile' className="font-semibold mr-3">Profile</NavLink></li>
+            :''
+        }
+      
+       
     </>
     return (
-        <div className="navbar bg-[#F8F0E5] sticky top-0 rounded-lg">
+        <div className="navbar bg-[#F8F0E5]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,16 +38,21 @@ const Header = () => {
                 {navLink}
                 </ul>
             </div>
-
+            <ToastContainer />
             <div className="navbar-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2">
         <div className="w-10 rounded-full">
           <img src="https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" />
         </div>
       </label>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
+     {
+        user? <button className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-3 rounded">
+        <Link to='/login'>Log Out</Link>
+      </button>
+      : <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
       <Link to='/login'>Log In</Link>
     </button>
+     }
             </div>
 
         </div>

@@ -7,6 +7,8 @@ import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Login from "../Pages/login";
 import Registration from "../Pages/Registration";
+import PrivateRoutes from "./PrivateRoutes";
+import Profile from "../Pages/Profile";
 
 
 
@@ -34,6 +36,10 @@ import Registration from "../Pages/Registration";
             {
               path:'/register',
               element:<Registration></Registration>
+            },
+            {
+                path:'/profile',
+                element:<PrivateRoutes><Profile></Profile></PrivateRoutes>
             }
           ]
         },
