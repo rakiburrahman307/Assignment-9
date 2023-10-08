@@ -1,6 +1,6 @@
 
 // import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
@@ -32,11 +32,11 @@ const Header = () => {
             <div className="navbar-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img src="https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" />
         </div>
       </label>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Log In
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
+      <Link to='/login'>Log In</Link>
     </button>
             </div>
 

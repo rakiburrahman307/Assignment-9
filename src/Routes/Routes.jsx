@@ -5,6 +5,8 @@ import Root from "../Components/Root";
 import Home from "../Components/Home/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Login from "./Pages/login";
+import Registration from "./Pages/Registration";
 
 
 
@@ -24,6 +26,14 @@ import Contact from "./Pages/Contact";
             {
               path:'/contact',
               element:<Contact></Contact>
+            },
+            {
+              path:'/login',
+              element:<Login></Login>
+            },
+            {
+              path:'/register',
+              element:<Registration></Registration>
             }
           ]
         },
