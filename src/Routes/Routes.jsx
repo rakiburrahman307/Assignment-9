@@ -10,6 +10,7 @@ import Registration from "../Pages/Registration";
 import PrivateRoutes from "./PrivateRoutes";
 import Profile from "../Pages/Profile";
 import Home from "../Components/Home/Home";
+import ErrorPage404 from "../Pages/ErrorPage404";
 
 
 
@@ -17,6 +18,7 @@ import Home from "../Components/Home/Home";
         {
           path: "/",
           element: <Root></Root>,
+          errorElement:<ErrorPage404/>,
           children:[
             {
               path:'/',

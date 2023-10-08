@@ -1,0 +1,77 @@
+
+{
+    "services": [
+      {
+        "id": 1,
+        "title": "Health Screenings",
+        "description": "Comprehensive health screenings to assess various aspects of your health.",
+        "image": "https://i.ibb.co/NmDKCQt/luis-melendez-Pd4l-Rf-Ko16-U-unsplash.jpg",
+        "location": "Main Hall"
+      },
+      {
+        "id": 2,
+        "title": "Nutrition Workshops",
+        "description": "Educational workshops on maintaining a healthy diet.",
+        "image": "https://i.ibb.co/2nxPKw3/katie-smith-u-Qs1802-D0-CQ-unsplash.jpg",
+        "location": "Room 101"
+      },
+      {
+        "id": 3,
+        "title": "Fitness Classes",
+        "description": "Fun and interactive fitness classes suitable for all fitness levels.",
+        "image": "https://i.ibb.co/RQm6P9z/geert-pieters-Nbp-UM86-Jo8-Y-unsplash.jpg",
+        "location": "Fitness Center"
+      },
+      {
+        "id": 4,
+        "title": "Mental Health Seminars",
+        "description": "Explore strategies for managing stress and anxiety.",
+        "image": "https://i.ibb.co/C78cqWB/marcelo-leal-6pc-GTJDuf6-M-unsplash.jpg",
+        "location": "Conference Room"
+      },
+      {
+        "id": 5,
+        "title": "Wellness Consultations",
+        "description": "One-on-one consultations with healthcare professionals.",
+        "image": "https://i.ibb.co/chZRWwB/marcelo-leal-k7ll1hpdh-FA-unsplash.jpg",
+        "location": "Consultation Room"
+      },
+      {
+        "id": 6,
+        "title": "Yoga and Meditation",
+        "description": "Relax and rejuvenate with yoga and meditation sessions.",
+        "image": "https://i.ibb.co/GkRjbZY/dingzeyu-li-ie8-WW5-KUx3o-unsplash.jpg",
+        "location": "Yoga Studio"
+      },
+      {
+        "id": 7,
+        "title": "Healthy Cooking Demos",
+        "description": "Watch live cooking demonstrations showcasing delicious and nutritious recipes.",
+        "image": "https://i.ibb.co/5MgqsP4/brenda-godinez-Zn-7-Fzo-L1w-unsplash.jpg",
+        "location": "Demo Kitchen"
+      },
+      {
+        "id": 8,
+        "title": "Vision and Eye Care",
+        "description": "Get your eyes checked and learn about maintaining good eye health.",
+        "image": "https://i.ibb.co/b2jpdwv/ion-fet-QRaw-Wg-V6gmo-unsplash.jpg",
+        "location": "Vision Center"
+      },
+      {
+        "id": 9,
+        "title": "Heart Health Sessions",
+        "description": "Dedicated sessions on heart health, including risk assessments and tips for a healthy heart.",
+        "image": "https://i.ibb.co/drDvFKY/christin-hume-0-Mo-F-Fe0w0-A-unsplash.jpg",
+        "location": "Heart Health Pavilion"
+      },
+      {
+        "id": 10,
+        "title": "Dental Check-ups",
+        "description": "Receive free dental check-ups and learn about maintaining good oral hygiene.",
+        "image": "https://i.ibb.co/hfqfrKF/lesly-juarez-1-Ah-GNGKuh-R0-unsplash.jpg",
+        "location": "Dental Care Area"
+        
+      }
+    ]
+  }
+  
