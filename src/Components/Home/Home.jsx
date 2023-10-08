@@ -1,4 +1,4 @@
-import Footer from "../../Routes/Pages/Footer";
+import Footer from "../../Pages/Footer";
 
 const Home = () => {
     return (
