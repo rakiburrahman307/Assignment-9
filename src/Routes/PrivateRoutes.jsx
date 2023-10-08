@@ -9,7 +9,11 @@ const PrivateRoutes = ({children}) => {
     const location = useLocation();
 
     if (loading) {
-        return <span className="loading loading-bars loading-lg text-center"></span>
+        return (
+            <div className='mx-auto flex justify-center items-center mt-5'>
+                <span className="loading loading-bars loading-lg"></span>
+            </div>
+        )
     }
 
     if (user) {

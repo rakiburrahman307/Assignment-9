@@ -1,10 +1,12 @@
 import Footer from "../../Pages/Footer";
+import Banner from "./Banner";
+
 
 const Home = () => {
     return (
         <div>
-            <p className="text-2xl">thi is home</p>
-            <Footer></Footer>
+        <Banner></Banner>
+        <Footer></Footer>
         </div>
         
     );

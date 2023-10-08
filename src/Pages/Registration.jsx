@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 
 const Registration = () => {
     const {createUser} = useContext(AuthContext);
-    const navigate =useNavigate()
+    const navigate = useNavigate()
 
 
     const handleRegistration = e =>{
@@ -31,8 +31,8 @@ const Registration = () => {
                     displayName: name,
                 })
                 .then(()=>{
+                    form.reset();
                     TostMassage("Create user successfully");
-
                     navigate("/")
                     
                 })

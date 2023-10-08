@@ -7,8 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/Provider';
 
+
 const Header = () => {
-    const {user} = useContext(AuthContext);
+    const {user,logOut} = useContext(AuthContext);
     const navLink = <>
         <li><NavLink to='/' className="font-semibold">Home</NavLink></li>
         <li><NavLink to='/about' className="font-semibold mx-3">About</NavLink></li>
@@ -40,19 +41,25 @@ const Header = () => {
             </div>
             <ToastContainer />
             <div className="navbar-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2">
-        <div className="w-10 rounded-full">
-          <img src="https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" />
-        </div>
-      </label>
-     {
-        user? <button className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-3 rounded">
-        <Link to='/login'>Log Out</Link>
-      </button>
-      : <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
-      <Link to='/login'>Log In</Link>
+          
+            {user ? (
+  <div className='flex justify-center items-center'>
+     <h2 className="text-xl text-block mr-2 font-semibold">{user.displayName}</h2>
+    <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2">
+      <div className="w-10 rounded-full">
+        <img src="https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" alt="User Avatar" />
+      </div>
+    </label>
+    <button onClick={logOut} className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-3 rounded-se-3xl rounded-r-3xl">
+      <Link to='/login'>Log Out</Link>
     </button>
-     }
+  </div>
+) : (
+  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-se-3xl">
+    <Link to='/login'>Log In</Link>
+  </button>
+)}
+
             </div>
 
         </div>
