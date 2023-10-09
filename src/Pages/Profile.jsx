@@ -5,7 +5,7 @@ import { AuthContext } from "../AuthProvider/Provider";
 const Profile = () => {
 
     const { user } = useContext(AuthContext);
-    console.log(user);
+    console.log(user.photoURL)
     return (
         <div className="container mx-auto p-8 w-1/2">
             <div className="bg-blue-200 p-6 rounded-lg shadow-md mx-auto ">
@@ -13,7 +13,7 @@ const Profile = () => {
                     <div className="w-24 mx-auto rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 mb-5">
                         <img
                             className="mx-auto rounded-full"
-                            src={user.photoURL ? user.photoURL : "https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"}
+                            src={user.photoURL ?? "https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"}
                             alt="User Avatar"
                         />
                     </div>

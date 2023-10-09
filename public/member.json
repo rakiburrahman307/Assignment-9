@@ -1,0 +1,26 @@
+[
+
+
+
+
+      {
+        "id": 1,
+        "name": "Dr. Emily Johnson",
+        "position": "Founder and Health Advisor",
+        "image": "https://i.ibb.co/vDzH4M5/usman-yousaf-p-Trhfmj2j-DA-unsplash.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Dr.Sarah Rodriguez",
+        "position": "Event Coordinator",
+        "image": "https://i.ibb.co/tZBwd8N/austin-distel-7b-Mdi-Iqz-J4-unsplash.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Dr.Michael Chen",
+        "position": "Wellness Educator",
+        "image": "https://i.ibb.co/mqhGV3k/humberto-chavez-FVh-yq-LR9e-A-unsplash.jpg"
+      }
+    ]
+
+  

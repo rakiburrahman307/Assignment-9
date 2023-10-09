@@ -9,6 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -30,7 +31,7 @@ const Login = () => {
     signInWithGoogle()
     .then(()=>{
       TostMassage('Sign in Successful with Google')
-      navigate(location?.state? location.state : '/');
+      navigate(location?.state ?? '/');
     })
     .catch(()=>TostMassage('Sign in Successful with Google'));
   }

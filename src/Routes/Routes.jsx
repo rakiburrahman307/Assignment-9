@@ -11,6 +11,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Profile from "../Pages/Profile";
 import Home from "../Components/Home/Home";
 import ErrorPage404 from "../Pages/ErrorPage404";
+import CardDetails from "../Pages/CardDetails";
 
 
 
@@ -43,7 +44,13 @@ import ErrorPage404 from "../Pages/ErrorPage404";
             {
                 path:'/profile',
                 element:<PrivateRoutes><Profile></Profile></PrivateRoutes>
+            },
+            {
+              path:'/cardDetail/:id',
+              element:<PrivateRoutes><CardDetails></CardDetails></PrivateRoutes>,
+              loader: () => fetch('/data.json')
             }
+            
           ]
         },
       ]);

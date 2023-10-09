@@ -10,33 +10,34 @@ export const AuthContext = createContext();
 
 const auth = getAuth(app)
 const Provider = ({ children }) => {
-const googleProvider = new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-   
+
 
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const logOut = () => {
+        setLoading(true);
         signOut(auth)
             .then(() => {
-                setLoading(true);
-                window.location.reload()    
-                
+
+                window.location.reload()
             })
             .catch(() => TostMassage("Sign out Unsuccessful"))
     };
 
     const signIn = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(auth,email,password)
+        return signInWithEmailAndPassword(auth, email, password)
     }
- const signInWithGoogle =()=>{
-    return signInWithPopup(auth,googleProvider);
-    
- }
+    const signInWithGoogle = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider);
+
+    }
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {

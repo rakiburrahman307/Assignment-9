@@ -46,7 +46,7 @@ const Header = () => {
 
         {user ? (
           <div className='flex justify-center items-center'>
-            <h2 className="text-xl text-block mr-2 font-semibold">{user.displayName}</h2>
+            <h2 className="text-xl text-block mr-2 font-semibold hidden md:flex lg:flex">{user.displayName}</h2>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2">
               <div className="w-10 rounded-full">
               <img
