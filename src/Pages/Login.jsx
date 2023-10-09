@@ -20,20 +20,20 @@ const Login = () => {
     signIn(email, password)
       .then(() => {
         TostMassage('Sign in successful');
-        navigate(location?.state? location.state : '/');
+        navigate(location?.state ? location.state : '/');
         form.reset();
       })
-      .catch(() => TostMassage("Sign in unsuccessful"));
+      .catch(() => TostMassage("Log in Failed!"));
 
-      
+
   };
-  const handleSignInWithGoogle =()=>{
+  const handleSignInWithGoogle = () => {
     signInWithGoogle()
-    .then(()=>{
-      TostMassage('Sign in Successful with Google')
-      navigate(location?.state ?? '/');
-    })
-    .catch(()=>TostMassage('Sign in Successful with Google'));
+      .then(() => {
+        TostMassage('Sign in Successful with Google')
+        navigate(location?.state ?? '/');
+      })
+      .catch(() => TostMassage('Sign in Successful with Google'));
   }
   return (
     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/NVtWwYC/pexels-george-dolgikh-1303081.jpg)' }}>
@@ -61,8 +61,8 @@ const Login = () => {
           </label>
         </form>
         <div className="mb-6 mx-auto">
-            <button onClick={handleSignInWithGoogle} className="btn  btn-outline btn-accent mx-auto w-48 rounded-full">Sign in With<FaGoogle className="text-xl"></FaGoogle></button>
-          </div>
+          <button onClick={handleSignInWithGoogle} className="btn  btn-outline btn-accent mx-auto w-48 rounded-full">Sign in With<FaGoogle className="text-xl"></FaGoogle></button>
+        </div>
       </div>
     </div>
   );

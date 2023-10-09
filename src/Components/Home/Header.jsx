@@ -16,7 +16,7 @@ const Header = () => {
     <li><NavLink to='/contact' className="font-bold mr-3">Contact</NavLink></li>
     {user ? (
       <>
-        <li><NavLink to='/dashboard' className="font-bold mr-3">Dashboard</NavLink></li>
+        <li><NavLink to='/healthTips' className="font-bold mr-3">Health Tips</NavLink></li>
         <li><NavLink to='/profile' className="font-bold mr-3">Profile</NavLink></li>
       </>
     ) : null}
@@ -49,11 +49,11 @@ const Header = () => {
             <h2 className="text-xl text-block mr-2 font-semibold hidden md:flex lg:flex">{user.displayName}</h2>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2">
               <div className="w-10 rounded-full">
-              <img
-                            className="mx-auto rounded-full"
-                            src={user.photoURL ? user.photoURL : "https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"}
-                            alt="User Avatar"
-                        />
+                <img
+                  className="mx-auto rounded-full"
+                  src={user.photoURL ? user.photoURL : "https://i.ibb.co/Qvvqdt9/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"}
+                  alt="User Avatar"
+                />
               </div>
             </label>
             <button onClick={logOut} className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-3 rounded-se-3xl rounded-r-3xl">

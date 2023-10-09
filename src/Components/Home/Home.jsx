@@ -7,14 +7,14 @@ import Banner from "./Banner";
 const Home = () => {
     return (
         <div>
-        <Banner></Banner>
-        <Services></Services>
-        <div className="mb-10">
-            <OurTeam></OurTeam>
+            <Banner></Banner>
+            <Services></Services>
+            <div className="mb-10">
+                <OurTeam></OurTeam>
+            </div>
+            <Footer></Footer>
         </div>
-        <Footer></Footer>
-        </div>
-        
+
     );
 };
 

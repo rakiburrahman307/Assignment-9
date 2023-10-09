@@ -31,7 +31,9 @@ const Services = () => {
 
     return (
         <div className="my-10 mx-auto">
-            <h2 className="text-center text-4xl font-bold mb-10">Our Service</h2>
+            <h2 className="text-red-500 text-center text-5xl font-bold mb-10" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000">Our <span className="text-blue-600">Service</span></h2>
             <div className="hero h-96" style={{ backgroundImage: 'url(https://i.ibb.co/Ny1wd03/successful-medical-team-1.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content mb-16">
@@ -49,7 +51,7 @@ const Services = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 px-6 mx-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 px-6 mx-2 md:mx-20 lg:mx-24">
                 {data
                     .filter((service) => {
                         if (searchResult === "") {

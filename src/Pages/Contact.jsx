@@ -23,7 +23,7 @@ const Contact = () => {
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4" checked="checked" />
                         <div className="collapse-title text-xl font-medium">
-                        What is the purpose of the Health Fair?
+                            What is the purpose of the Health Fair?
                         </div>
                         <div className="collapse-content">
                             <p>The Health Fair is dedicated to promoting health and wellness in our community. Our goal is to provide valuable information, screenings, and resources to help individuals lead healthier lives.</p>
@@ -32,7 +32,7 @@ const Contact = () => {
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4" />
                         <div className="collapse-title text-xl font-medium">
-                        What can I expect at the Health Fair?
+                            What can I expect at the Health Fair?
                         </div>
                         <div className="collapse-content">
                             <p> The Health Fair offers a day filled with educational sessions, interactive activities, and opportunities to connect with healthcare professionals. You all find workshops, health screenings, and a variety of exhibits covering nutrition, fitness, mental well-being, and more.</p>
@@ -41,7 +41,7 @@ const Contact = () => {
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4" />
                         <div className="collapse-title text-xl font-medium">
-                        How can I participate in the Health Fair?
+                            How can I participate in the Health Fair?
                         </div>
                         <div className="collapse-content">
                             <p> Participation is easy! Simply check our event schedule and attend the sessions or activities that interest you. Registration may be required for some workshops or screenings, and you can find details on our website.</p>
